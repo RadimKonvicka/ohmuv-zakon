@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <title>Výpočet Ohmova zákona</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        
+</head>
+
+<body>
+    <header class="bg-primary text-center">
+        <h1 class="display-3 text-light p-3" >Ohmův zákon</h1>
+        <a href="./index.html"><button class="home bg-danger">HOME</button></a>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-12 bg-danger" id="vyber">
+                <h2 class="text-center text-light text-uppercase p-2" >Vyber co chceš vypočítat</h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 text-center">
+                <button id="btnNapeti" class="btn btn-primary m-2">Vypočítat napětí</button>
+                <button id="btnProud" class="btn btn-primary m-2">Vypočítat proud</button>
+                <button id="btnOdpor" class="btn btn-primary m-2">Vypočítat odpor</button>
+            </div>
+        </div>
+
+        <div id="formular" class="row mt-4">
+            <div class="col-12">
+                <div id="napetiForm" class="d-none">
+                    <h4>Pro výpočet napětí zadej proud a odpor</h4>
+                    <input type="number" id="proud" class="form-control mb-3" placeholder="Proud (A)">
+                    <input type="number" id="odpor" class="form-control mb-3" placeholder="Odpor (Ω)">
+                    <button type="button" class="btn btn-success" id="vypocitatNapeti">Vypočítat napětí</button>
+                    <div id="vystupNapeti" class="mt-3"></div>
+                </div>
+
+                <div id="proudForm" class="d-none">
+                    <h4>Pro výpočet proudu zadej napětí a odpor</h4>
+                    <input type="number" id="napeti" class="form-control mb-3" placeholder="Napětí (V)">
+                    <input type="number" id="odpor" class="form-control mb-3" placeholder="Odpor (Ω)">
+                    <button type="button" class="btn btn-success" id="vypocitatProud">Vypočítat proud</button>
+                    <div id="vystupProud" class="mt-3"></div>
+                </div>
+
+                <div id="odporForm" class="d-none">
+                    <h4>Pro výpočet odporu zadej napětí a proud</h4>
+                    <input type="number" id="napetiOdpor" class="form-control mb-3" placeholder="Napětí (V)">
+                    <input type="number" id="proudOdpor" class="form-control mb-3" placeholder="Proud (A)">
+                    <button type="button" class="btn btn-success" id="vypocitatOdpor">Vypočítat odpor</button>
+                    <div id="vystupOdpor" class="mt-3" class="text-info"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center bg-dark text-light p-3" id="container">
+        <p>&nbsp; 2024 - Radim Konvička, IT2</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</body>
+
+</html>
